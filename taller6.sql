@@ -62,8 +62,7 @@ begin
         cliente_direccion := 'direccion ' || i;
         cliente_telefono := '300' || lpad(i::text, 7, '0');
         
-        insert into cliente(nombre, email, direccion, telefono)
-        values (cliente_nombre, cliente_email, cliente_direccion, cliente_telefono);
+        insert into cliente(nombre, email, direccion, telefono) values (cliente_nombre, cliente_email, cliente_direccion, cliente_telefono);
     end loop;
 
     for i in 1..150 loop
@@ -82,8 +81,7 @@ begin
                            end;
         cliente_id := ((i - 1) % 50) + 1;
         
-        insert into servicios(codigo, tipo, monto, cuota, intereses, valor_total, estado, cliente_id)
-        values (servicio_codigo, tipo_servicio, monto_servicio, cuota_servicio, intereses_servicio, valor_total_servicio, estado_servicio, cliente_id);
+        insert into servicios(codigo, tipo, monto, cuota, intereses, valor_total, estado, cliente_id) values (servicio_codigo, tipo_servicio, monto_servicio, cuota_servicio, intereses_servicio, valor_total_servicio, estado_servicio, cliente_id);
     end loop;
 
     for j in 1..50 loop
@@ -91,11 +89,58 @@ begin
         fecha_pago := current_date - (random() * 365)::int;
         total_pago := (random() * 1000 + 100)::float;
         
-        insert into pagos(codigo_transaccion, fecha_pago, total, servicio_id)
-        values (pago_codigo_transaccion, fecha_pago, total_pago, ((j - 1) % 150) + 1);
+        insert into pagos(codigo_transaccion, fecha_pago, total, servicio_id) values (pago_codigo_transaccion, fecha_pago, total_pago, ((j - 1) % 150) + 1);
     end loop;
 
 end $$;
 
 call poblar_base_datos();
+
+create or replace function transacciones_total(mes integer, cliente_id_param integer)
+returns float
+language plpgsql
+as $$
+declare
+    total_transacciones float;
+begin
+    select sum(p.total) into total_transacciones from pagos p join servicios s on p.servicio_id = s.id where s.cliente_id = cliente_id_param and extract(month from p.fecha_pago) = mes;
+    
+    if total_transacciones is null then
+        total_transacciones := 0;
+    end if;
+
+    return total_transacciones;
+end $$;
+
+
+select transacciones_total(9, 3);
+
+create or replace function total_pagos_cliente(mes integer, cliente_id_param integer)
+returns float
+language plpgsql
+as $$
+declare
+    total_pagos float;
+begin
+    select sum(p.total) into total_pagos from pagos p join servicios s on p.servicio_id = s.id where s.cliente_id = cliente_id_param and extract(month from p.fecha_pago) = mes;
+    
+    if total_pagos is null then
+        total_pagos := 0;
+    end if;
+
+    return total_pagos;
+end $$;
+
+select total_pagos_cliente(9, 3);
+
+
+
+
+
+
+	
+
+
+
+
 
