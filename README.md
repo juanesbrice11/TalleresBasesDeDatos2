@@ -1,1 +1,3 @@
-# TalleresBasesDeDatos2
+# TalleresBasesDeDatos2 
+Juan Esteban Briceño Marín
+
