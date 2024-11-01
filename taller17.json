@@ -1,0 +1,196 @@
+[
+  {
+    "ISBN": "978-958-8641-44-8",
+    "Título": "Cien años de soledad",
+    "NombreAutor": "Gabriel García Márquez",
+    "Género": "Novela",
+    "año": 1967
+  },
+  {
+    "ISBN": "978-958-725-122-8",
+    "Título": "El amor en los tiempos del cólera",
+    "NombreAutor": "Gabriel García Márquez",
+    "Género": "Novela",
+    "año": 1985
+  },
+  {
+    "ISBN": "978-958-8869-91-0",
+    "Título": "Delirio",
+    "NombreAutor": "Laura Restrepo",
+    "Género": "Novela",
+    "año": 2004
+  },
+  {
+    "ISBN": "978-958-7574-33-4",
+    "Título": "La tejedora de coronas",
+    "NombreAutor": "Germán Espinosa",
+    "Género": "Novela",
+    "año": 1982
+  },
+  {
+    "ISBN": "978-958-8895-87-1",
+    "Título": "El olvido que seremos",
+    "NombreAutor": "Héctor Abad Faciolince",
+    "Género": "Memorias",
+    "año": 2006
+  },
+  {
+    "ISBN": "978-958-8461-26-7",
+    "Título": "Que viva la música",
+    "NombreAutor": "Andrés Caicedo",
+    "Género": "Novela",
+    "año": 1977
+  },
+  {
+    "ISBN": "978-958-8769-75-0",
+    "Título": "La casa grande",
+    "NombreAutor": "Álvaro Cepeda Samudio",
+    "Género": "Novela",
+    "año": 1962
+  },
+  {
+    "ISBN": "978-958-9963-04-1",
+    "Título": "La forma de las ruinas",
+    "NombreAutor": "Juan Gabriel Vásquez",
+    "Género": "Novela",
+    "año": 2015
+  },
+  {
+    "ISBN": "978-958-5696-17-3",
+    "Título": "Satanás",
+    "NombreAutor": "Mario Mendoza",
+    "Género": "Novela",
+    "año": 2002
+  },
+  {
+    "ISBN": "978-958-5906-33-3",
+    "Título": "El ruido de las cosas al caer",
+    "NombreAutor": "Juan Gabriel Vásquez",
+    "Género": "Novela",
+    "año": 2011
+  },
+  {
+    "ISBN": "978-958-8694-31-8",
+    "Título": "La multitud errante",
+    "NombreAutor": "Laura Restrepo",
+    "Género": "Novela",
+    "año": 2001
+  },
+  {
+    "ISBN": "978-958-7572-38-1",
+    "Título": "Rosario Tijeras",
+    "NombreAutor": "Jorge Franco",
+    "Género": "Novela",
+    "año": 1999
+  },
+  {
+    "ISBN": "978-958-5782-25-6",
+    "Título": "Páginas de vuelta",
+    "NombreAutor": "Antonio Caballero",
+    "Género": "Ensayo",
+    "año": 1995
+  },
+  {
+    "ISBN": "978-958-8843-36-7",
+    "Título": "El mensajero",
+    "NombreAutor": "Germán Castro Caycedo",
+    "Género": "Crónica",
+    "año": 1999
+  },
+  {
+    "ISBN": "978-958-5588-44-7",
+    "Título": "La ceiba de la memoria",
+    "NombreAutor": "Roberto Burgos Cantor",
+    "Género": "Novela",
+    "año": 2007
+  },
+  {
+    "ISBN": "978-958-5586-27-6",
+    "Título": "El país de las sombras",
+    "NombreAutor": "Tomás González",
+    "Género": "Novela",
+    "año": 2019
+  },
+  {
+    "ISBN": "978-958-8881-64-6",
+    "Título": "El general en su laberinto",
+    "NombreAutor": "Gabriel García Márquez",
+    "Género": "Novela",
+    "año": 1989
+  },
+  {
+    "ISBN": "978-958-8624-97-9",
+    "Título": "El zarco",
+    "NombreAutor": "Álvaro Mutis",
+    "Género": "Novela",
+    "año": 1985
+  },
+  {
+    "ISBN": "978-958-5540-60-4",
+    "Título": "Opio en las nubes",
+    "NombreAutor": "Rafael Chaparro Madiedo",
+    "Género": "Novela",
+    "año": 1992
+  },
+  {
+    "ISBN": "978-958-8014-88-2",
+    "Título": "Piedra de Sol",
+    "NombreAutor": "Octavio Paz",
+    "Género": "Poesía",
+    "año": 1957
+  }
+]
+
+
+db.Libros.updateMany(
+  { Título: "Cien años de soledad" },
+  { $set: { Género: "Realismo mágico" } }
+)
+
+db.Libros.updateMany(
+  { Título: "El amor en los tiempos del cólera" },
+  { $set: { Género: "Romance" } }
+)
+
+db.Libros.updateMany(
+  { Título: "Delirio" },
+  { $set: { Género: "Thriller psicológico" } }
+)
+
+db.Libros.updateMany(
+  { Título: "La tejedora de coronas" },
+  { $set: { Género: "Histórica" } }
+)
+
+db.Libros.updateMany(
+  { Título: "El olvido que seremos" },
+  { $set: { Género: "Biografía" } }
+)
+
+db.Libros.updateMany(
+  { Título: "Que viva la música" },
+  { $set: { Género: "Culto" } }
+)
+
+db.Libros.updateMany(
+  { Título: "La casa grande" },
+  { $set: { Género: "Novela histórica" } }
+)
+
+db.Libros.updateMany(
+  { Título: "La forma de las ruinas" },
+  { $set: { Género: "Novela negra" } }
+)
+
+db.Libros.updateMany(
+  { Título: "Satanás" },
+  { $set: { Género: "Suspenso" } }
+)
+
+db.Libros.updateMany(
+  { Título: "El ruido de las cosas al caer" },
+  { $set: { Género: "Drama" } }
+)
+
+db.Libros.find({ Género: "Novela" })
+db.Libros.find({ año: { $gt: 2000 } })
