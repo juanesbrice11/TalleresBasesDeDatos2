@@ -1,0 +1,14 @@
+db.Productos.find(
+{},
+{ "Categoria": 0, "Comentarios": 0 }
+)
+
+db.Productos.find(
+{},
+{ "Comentarios": 0 }
+)
+
+db.Productos.find(
+{},
+{ "Categoria": 0 }
+)

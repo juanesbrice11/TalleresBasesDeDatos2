@@ -1,0 +1,169 @@
+[
+    {
+        "LibroID": 1,
+        "ISBN": "978-958-8641-44-8",
+        "Titulo": "Cien años de soledad",
+        "AutorID": 1,
+        "GeneroID": 1
+    },
+    {
+        "LibroID": 2,
+        "ISBN": "978-958-725-122-8",
+        "Titulo": "El amor en los tiempos del cólera",
+        "AutorID": 1,
+        "GeneroID": 2
+    },
+    {
+        "LibroID": 3,
+        "ISBN": "978-958-8869-91-0",
+        "Titulo": "Delirio",
+        "AutorID": 2,
+        "GeneroID": 3
+    },
+    {
+        "LibroID": 4,
+        "ISBN": "978-958-7574-33-4",
+        "Titulo": "La tejedora de coronas",
+        "AutorID": 3,
+        "GeneroID": 4
+    },
+    {
+        "LibroID": 5,
+        "ISBN": "978-958-8895-87-1",
+        "Titulo": "El olvido que seremos",
+        "AutorID": 4,
+        "GeneroID": 5
+    },
+    {
+        "LibroID": 6,
+        "ISBN": "978-958-8461-26-7",
+        "Titulo": "Que viva la música",
+        "AutorID": 5,
+        "GeneroID": 6
+    },
+    {
+        "LibroID": 7,
+        "ISBN": "978-958-8769-75-0",
+        "Titulo": "La casa grande",
+        "AutorID": 6,
+        "GeneroID": 7
+    },
+    {
+        "LibroID": 8,
+        "ISBN": "978-958-9963-04-1",
+        "Titulo": "La forma de las ruinas",
+        "AutorID": 7,
+        "GeneroID": 8
+    },
+    {
+        "LibroID": 9,
+        "ISBN": "978-958-5696-17-3",
+        "Titulo": "Satanás",
+        "AutorID": 8,
+        "GeneroID": 9
+    },
+    {
+        "LibroID": 10,
+        "ISBN": "978-958-5906-33-3",
+        "Titulo": "El ruido de las cosas al caer",
+        "AutorID": 7,
+        "GeneroID": 10
+    },
+    {
+        "AutorID": 1,
+        "Nombre": "Gabriel García Márquez",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "AutorID": 2,
+        "Nombre": "Laura Restrepo",
+        "Nacionalidad": "Colombiana"
+    },
+    {
+        "AutorID": 3,
+        "Nombre": "Germán Espinosa",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "AutorID": 4,
+        "Nombre": "Héctor Abad Faciolince",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "AutorID": 5,
+        "Nombre": "Andrés Caicedo",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "AutorID": 6,
+        "Nombre": "Álvaro Cepeda Samudio",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "AutorID": 7,
+        "Nombre": "Juan Gabriel Vásquez",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "AutorID": 8,
+        "Nombre": "Mario Mendoza",
+        "Nacionalidad": "Colombiano"
+    },
+    {
+        "GeneroID": 1,
+        "NombreGenero": "Realismo Mágico"
+    },
+    {
+        "GeneroID": 2,
+        "NombreGenero": "Romance"
+    },
+    {
+        "GeneroID": 3,
+        "NombreGenero": "Thriller Psicológico"
+    },
+    {
+        "GeneroID": 4,
+        "NombreGenero": "Histórica"
+    },
+    {
+        "GeneroID": 5,
+        "NombreGenero": "Memorias"
+    },
+    {
+        "GeneroID": 6,
+        "NombreGenero": "Cultura"
+    },
+    {
+        "GeneroID": 7,
+        "NombreGenero": "Novela Histórica"
+    },
+    {
+        "GeneroID": 8,
+        "NombreGenero": "Novela Negra"
+    },
+    {
+        "GeneroID": 9,
+        "NombreGenero": "Suspenso"
+    },
+    {
+        "GeneroID": 10,
+        "NombreGenero": "Drama"
+    },
+    {
+        "$lookup": {
+            "from": "Autores",
+            "localField": "AutorID",
+            "foreignField": "AutorID",
+            "as": "AutorInfo"
+        }
+    },
+    {
+        "$lookup": {
+            "from": "Generos",
+            "localField": "GeneroID",
+            "foreignField": "GeneroID",
+            "as": "GeneroInfo"
+        }
+    }
+]
+

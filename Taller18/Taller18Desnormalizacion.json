@@ -1,0 +1,173 @@
+[
+    {
+      "ProductoID": 1,
+      "Nombre": "Café Colombiano",
+      "Descripcion": "Café de origen colombiano, 500g",
+      "Precio": 30000,
+      "Categoria": {
+        "CategoriaID": 2,
+        "NombreCategoria": "Alimentos"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 1,
+          "Texto": "Un café con sabor excepcional",
+          "Cliente": "Alejandro"
+        }
+      ]
+    },
+    {
+      "ProductoID": 2,
+      "Nombre": "Artesanía de Ráquira",
+      "Descripcion": "Cerámica hecha a mano",
+      "Precio": 50000,
+      "Categoria": {
+        "CategoriaID": 3,
+        "NombreCategoria": "Artesanías"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 2,
+          "Texto": "Magnífica artesanía colombiana",
+          "Cliente": "Claudia"
+        }
+      ]
+    },
+    {
+      "ProductoID": 3,
+      "Nombre": "Sombrero Vueltiao",
+      "Descripcion": "Sombrero tradicional colombiano",
+      "Precio": 80000,
+      "Categoria": {
+        "CategoriaID": 3,
+        "NombreCategoria": "Artesanías"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 3,
+          "Texto": "Perfecto para protegerse del sol",
+          "Cliente": "Santiago"
+        }
+      ]
+    },
+    {
+      "ProductoID": 4,
+      "Nombre": "Café de altura",
+      "Descripcion": "Café cultivado en la Sierra Nevada, 500g",
+      "Precio": 35000,
+      "Categoria": {
+        "CategoriaID": 2,
+        "NombreCategoria": "Alimentos"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 4,
+          "Texto": "El aroma es inigualable",
+          "Cliente": "Mariana"
+        }
+      ]
+    },
+    {
+      "ProductoID": 5,
+      "Nombre": "Arequipe",
+      "Descripcion": "Dulce de leche tradicional, 250g",
+      "Precio": 20000,
+      "Categoria": {
+        "CategoriaID": 2,
+        "NombreCategoria": "Alimentos"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 5,
+          "Texto": "Un manjar delicioso",
+          "Cliente": "Valeria"
+        }
+      ]
+    },
+    {
+      "ProductoID": 6,
+      "Nombre": "Poncho",
+      "Descripcion": "Poncho típico de lana",
+      "Precio": 70000,
+      "Categoria": {
+        "CategoriaID": 3,
+        "NombreCategoria": "Artesanías"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 6,
+          "Texto": "Muy cálido y acogedor",
+          "Cliente": "Fernando"
+        }
+      ]
+    },
+    {
+      "ProductoID": 7,
+      "Nombre": "Hamaca",
+      "Descripcion": "Hamaca tejida a mano",
+      "Precio": 90000,
+      "Categoria": {
+        "CategoriaID": 3,
+        "NombreCategoria": "Artesanías"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 7,
+          "Texto": "Ideal para descansar",
+          "Cliente": "Camila"
+        }
+      ]
+    },
+    {
+      "ProductoID": 8,
+      "Nombre": "Queso costeño",
+      "Descripcion": "Queso tradicional de la costa, 500g",
+      "Precio": 25000,
+      "Categoria": {
+        "CategoriaID": 2,
+        "NombreCategoria": "Alimentos"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 8,
+          "Texto": "Auténtico sabor costeño",
+          "Cliente": "Diego"
+        }
+      ]
+    },
+    {
+      "ProductoID": 9,
+      "Nombre": "Aguardiente Antioqueño",
+      "Descripcion": "Licor tradicional, 750ml",
+      "Precio": 60000,
+      "Categoria": {
+        "CategoriaID": 2,
+        "NombreCategoria": "Alimentos"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 9,
+          "Texto": "Excelente calidad",
+          "Cliente": "Esteban"
+        }
+      ]
+    },
+    {
+      "ProductoID": 10,
+      "Nombre": "Mochila Wayuu",
+      "Descripcion": "Bolsa artesanal tejida",
+      "Precio": 120000,
+      "Categoria": {
+        "CategoriaID": 3,
+        "NombreCategoria": "Artesanías"
+      },
+      "Comentarios": [
+        {
+          "ComentarioID": 10,
+          "Texto": "Muy práctica y bonita",
+          "Cliente": "Sofía"
+        }
+      ]
+    }
+  ]
+
