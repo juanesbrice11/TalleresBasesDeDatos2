@@ -138,59 +138,175 @@
     "NombreAutor": "Octavio Paz",
     "Género": "Poesía",
     "año": 1957
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-8641-44-8"
+    },
+    "update": {
+      "$set": {
+        "Género": "Realismo mágico"
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-725-122-8"
+    },
+    "update": {
+      "$set": {
+        "Género": "Romance"
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-8869-91-0"
+    },
+    "update": {
+      "$set": {
+        "Género": "Thriller psicológico",
+        "año": 2005
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-7574-33-4"
+    },
+    "update": {
+      "$set": {
+        "Género": "Histórica",
+        "año": 1983
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-8895-87-1"
+    },
+    "update": {
+      "$set": {
+        "Género": "Biografía"
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-8461-26-7"
+    },
+    "update": {
+      "$set": {
+        "Género": "Cultura",
+        "año": 1978
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-8769-75-0"
+    },
+    "update": {
+      "$set": {
+        "Género": "Novela histórica",
+        "año": 1963
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-9963-04-1"
+    },
+    "update": {
+      "$set": {
+        "Género": "Novela negra"
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-5696-17-3"
+    },
+    "update": {
+      "$set": {
+        "Género": "Suspenso",
+        "año": 2003
+      }
+    }
+  },
+  {
+    "filter": {
+      "ISBN": "978-958-5906-33-3"
+    },
+    "update": {
+      "$set": {
+        "Género": "Drama",
+        "año": 2012
+      }
+    }
+  },
+  {
+    "ISBN": "978-958-8769-75-0"
+  },
+  {
+    "ISBN": "978-958-8641-44-8"
+  },
+  {
+    "año": {
+      "$gt": 1970
+    }
+  },
+  {
+    "año": {
+      "$lt": 2006
+    }
+  },
+  {
+    "año": {
+      "$gte": 1998
+    }
+  },
+  {
+    "año": {
+      "$lte": 1969
+    }
+  },
+  {
+    "Título": {
+      "$ne": "Cien años de soledad"
+    }
+  },
+  {
+    "Género": {
+      "$in": [
+        "Ensayo",
+        "Crónica"
+      ]
+    }
+  },
+
+{
+    "$and": [
+      {
+        "año": {
+          "$gte": 1985
+        }
+      },
+      {
+        "Género": "Novela"
+      }
+    ]
+  },
+  {
+    "$or": [
+      {
+        "año": {
+          "$lte": 1985
+        }
+      },
+      {
+        "Género": "Novela"
+      }
+    ]
   }
 ]
-
-
-db.Libros.updateMany(
-  { Título: "Cien años de soledad" },
-  { $set: { Género: "Realismo mágico" } }
-)
-
-db.Libros.updateMany(
-  { Título: "El amor en los tiempos del cólera" },
-  { $set: { Género: "Romance" } }
-)
-
-db.Libros.updateMany(
-  { Título: "Delirio" },
-  { $set: { Género: "Thriller psicológico" } }
-)
-
-db.Libros.updateMany(
-  { Título: "La tejedora de coronas" },
-  { $set: { Género: "Histórica" } }
-)
-
-db.Libros.updateMany(
-  { Título: "El olvido que seremos" },
-  { $set: { Género: "Biografía" } }
-)
-
-db.Libros.updateMany(
-  { Título: "Que viva la música" },
-  { $set: { Género: "Culto" } }
-)
-
-db.Libros.updateMany(
-  { Título: "La casa grande" },
-  { $set: { Género: "Novela histórica" } }
-)
-
-db.Libros.updateMany(
-  { Título: "La forma de las ruinas" },
-  { $set: { Género: "Novela negra" } }
-)
-
-db.Libros.updateMany(
-  { Título: "Satanás" },
-  { $set: { Género: "Suspenso" } }
-)
-
-db.Libros.updateMany(
-  { Título: "El ruido de las cosas al caer" },
-  { $set: { Género: "Drama" } }
-)
-
-db.Libros.find({ Género: "Novela" })
-db.Libros.find({ año: { $gt: 2000 } })
