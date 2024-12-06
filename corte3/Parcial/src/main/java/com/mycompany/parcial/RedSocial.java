@@ -12,17 +12,14 @@ import org.neo4j.driver.Session;
 public class RedSocial {
     private final Driver driver;
 
-    // Constructor para inicializar la conexión a la base de datos
     public RedSocial(String uri, String user, String password) {
         driver = GraphDatabase.driver(uri, AuthTokens.basic(user, password));
     }
 
-    // Cerrar el driver cuando se termine de usar
     public void close() {
         driver.close();
     }
 
-    // Método para crear un nodo Persona
     public void crearPersona(String nombre, String correo, int edad, String ciudad) {
         try (Session session = driver.session()) {
             session.writeTransaction(tx -> {
