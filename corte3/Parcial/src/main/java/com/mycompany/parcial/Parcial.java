@@ -361,7 +361,7 @@ public class Parcial {
         redSocial.crearPersona("Juansito", "juansito@example.com", 22, "Manizales");
         redSocial.crearPersona("Pedrito", "pedrito@example.com", 19, "Manizales");
 
-        redSocial.crearRelacionComentario("Juan", "María", "Buen trabajo en el proyecto");
+        redSocial.crearRelacionComentario("Juansito", "Pedrito", "Relacion creada");
 
         redSocial.close();
     }
